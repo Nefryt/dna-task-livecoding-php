@@ -31,7 +31,7 @@ class Payment extends Model
      */
     protected $primaryKey = 'id';
 
-    protected $fillable = ['paymentId', 'userId', 'merchantId', 'amount'];
+    protected $fillable = ['paymentId', 'userId', 'merchantId', 'amount', 'created_at'];
 
     /**
      * Indicates if the model's ID is auto-incrementing.

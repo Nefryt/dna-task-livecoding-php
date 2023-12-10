@@ -7,6 +7,7 @@ use App\Http\Resources\PaymentDto;
 use App\Http\Resources\UserDto;
 use App\Models\Payment;
 use Exception;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Ramsey\Uuid\Uuid;
 
@@ -56,6 +57,7 @@ readonly class PaymentService
             'userId' => $userDto->getUserId(),
             'merchantId' => $merchantDto->getMerchantId(),
             'amount' => $paymentDto->getAmount(),
+            'created_at' => Carbon::now(),
         ]);
     }
 }
